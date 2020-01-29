@@ -33,6 +33,7 @@ var comeco;
 var fim;
 var altura, largura;
 var path = [];
+var caminho;
 
 function Celula(i, j, valor){
   this.x = i;
@@ -220,6 +221,7 @@ function draw() {
             if(!openSet.includes(vizinho)){
               openSet.push(vizinho);
             }
+            caminho = vizinho;
           }
         }
       }
@@ -242,6 +244,11 @@ function draw() {
 
   for(var i = 0; i < openSet.length; i++){
     openSet[i].mudarCor(0, 255, 0);
+  }
+
+  while(caminho.anterior){
+    caminho.mudarCor(255, 0, 255);
+    caminho = caminho.anterior;
   }
 
 }
