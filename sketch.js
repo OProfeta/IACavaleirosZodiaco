@@ -227,6 +227,7 @@ function draw() {
       }
     } else {
       // Sem solucao
+      console.log("Sem solução.");
     }
   }
 
