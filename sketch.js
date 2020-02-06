@@ -247,9 +247,10 @@ function draw() {
     openSet[i].mudarCor(0, 255, 0);
   }
 
-  while(caminho.anterior){
-    caminho.mudarCor(255, 0, 255);
-    caminho = caminho.anterior;
+  if(caminho){
+    while(caminho.anterior){
+      caminho.mudarCor(255, 0, 255);
+      caminho = caminho.anterior;
+    }
   }
-
 }
